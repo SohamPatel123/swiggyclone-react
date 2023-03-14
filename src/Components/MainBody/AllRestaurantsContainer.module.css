@@ -1,0 +1,164 @@
+.allRestaurantsContainer {
+    width: 100%;
+}
+
+.RestaurantWrapper {
+    margin: auto;
+    width: min(100%,1300px);
+    padding: 12px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.outerCont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    height: 380px;
+}
+
+@media screen and (max-width:1200px) {
+    .RestaurantWrapper {
+        width: 100vw;
+        max-width: 700px;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .outerCont{
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }    
+}
+
+.Card {
+    height: fit-content;
+    width: 254px;
+    padding: 20px;
+    padding-bottom: 10px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.Card:hover {
+    border: 1px solid #d9d9db;
+}
+
+
+.Card:hover .quickView {
+    display: block;
+}
+
+.RestaurantCardImage {
+    width: 254px;
+    display: block;
+}
+
+.RestaurantName{
+    margin-top: 14px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.RestaurantDishes{
+    font-size: 13px;
+    margin-top:4px;
+    color: #686b78;
+}
+
+.InnerWrapper {
+    display: flex;
+    margin: 18px 0px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.RestaurantTime, .RestaurantServingSize, .InnerWrapper>span {
+    text-transform: uppercase;
+    color: #535665;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.ratingWrapper {
+    background-color: #48c479;
+    height: 20px;
+    width: 42px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.RestaurantRating{
+    font-size: 12px;
+    text-align: center;
+    color: white;
+}
+
+.RestaurantPromotionTag {
+    color: white;
+    position: absolute;
+    font-weight: 300;
+    font-size: 12px;
+    top: 20px;
+    left: 12px;
+    background: rgb(58, 60, 65);
+    padding: 6px 10px;
+}
+
+.RestaurantPromotionBanner {    
+    position: absolute;
+    top: 46px;
+    left:12px;
+    border-left: 8px solid transparent;
+    border-top: 8px solid rgb(58, 60, 65);;
+}
+
+.RestaurantOffers {
+    display: flex;
+    gap: 4px;
+    height: 20px;
+    align-items: flex-start;
+    color: #926459;
+    margin: 14px 0px 10px;
+    padding-top: 14px;
+    border-top: 1px solid #e9e9eb;
+}
+
+.offerSyntax {
+    text-overflow: ellipsis;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.quickView {
+    display: none;
+    text-align: center;
+    color: #5d8ed5;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    text-transform: uppercase;
+    padding-top: 14px;
+    border-top: 1px solid #e9e9eb;
+}
+
+.quickView:hover {
+    color:#5f616d;
+}
+
+.dontDisplay {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,74 @@
+.mainFooterTemplate {
+    background-color: black;
+    color: white;
+    position: relative;
+    width: 100%;
+    z-index:3;
+    margin-top: 40px;
+    padding: 80px 0px;
+    height: auto;
+    width: 100vw;
+}
+
+.footerWrapper {
+    margin: auto;
+    min-width: min(100%, 1200px);
+    max-width: min(100%, 1200px);
+    display: flex;
+    flex-direction: column;
+}
+
+.companySupports {
+    min-width: min(100%, 1200px);
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1200px) {
+    .companySupports {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+  }
+
+.companySupports > ul {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    list-style-type: none;
+}
+
+.companySupports > ul  li {
+    color: white;
+    font-size: 14px;
+    padding-bottom: 12px;
+}
+
+.companySupports > ul :first-child {
+    color: grey;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.downloadOptions {
+    width: min(15vw,250px);
+    margin-bottom: 16px;
+}
+
+.availableLocations {
+    list-style-type: none;
+    border-top: 1px solid white;
+    padding: 30px 0px;
+    height: 100px;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}

@@ -1,0 +1,128 @@
+.offerSpace {
+    height:340px;
+    background: #181a29;
+    align-content: center;
+    display:flex;
+    align-items: center;
+    padding: 0px 0px;
+    width: 100vw;
+}
+
+.offerHeader {
+    position:relative;
+    width: min(100vw,1200px);
+    overflow: hidden;
+}
+
+.buttonWrapper {
+    position:relative;
+    margin: auto;
+    width: min(100vw,1200px);
+    height: 300px;
+    overflow: visible;
+}
+
+.offerWrapper {
+    overflow:hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease; 
+    transform: translateX(0%);
+    height: 100%;
+}
+
+.cards {
+    display:inline-block;
+    padding:20px 0px;
+    height:260px;
+    width:260px;
+    margin-right: 50px;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.cards:hover {
+    cursor: pointer;
+    transform:scale(1.05);
+}
+
+.rightArrowKey {
+    background: white;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    display: inherit;
+    top:50%;
+    right:-23.5px;
+    margin-top: -23.5px;
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    border: 0;
+    padding-top: 4px;
+}
+
+.rightArrowKey:hover .rightArrowKeyImage{
+    cursor: pointer;
+    transform: translateX(8px);
+}
+
+.rightArrowKeyImage {
+    display: inherit;
+    transition: transform 0.2s;
+    width: 25px;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    border-radius: 50%;
+}
+
+.leftArrowKey {
+    display: inherit;
+    background: white;
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top:50%;
+    margin-top:-23.5px;
+    left:-23.5px;
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    border: 0;
+    padding-top: 4px;
+}
+
+.leftArrowKey:hover .leftArrowKeyImage{
+    cursor: pointer;
+    transform: translateX(8px);
+}
+
+.leftArrowKeyImage{
+    display: inherit;
+    rotate: 180deg;
+    width: 25px;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+@media (max-width:1230px) {
+    .rightArrowKey {
+        right: 10px;
+    }
+    .leftArrowKey {
+        left: 10px;
+    }
+}
+
+.searchBar {
+    width: 320px;
+    border: 1px solid orange;
+    border-radius: 16px;
+    padding: 4px 8px;
+    margin: 4px;
+    height: 2em;
+    overflow: scroll;
+}

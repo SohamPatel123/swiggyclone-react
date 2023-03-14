@@ -1,0 +1,166 @@
+.headerWrapper {
+    background-color: white;
+    box-sizing: border-box;
+    position:sticky;
+    top:0px;
+    z-index:1;
+    min-height: 80px;
+    padding: 0px 20px;
+    width: 100vw;
+}
+
+.mainHeader { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0px auto;
+    max-width: min(100%,1200px);
+    min-width: min(100%,1200px);
+    height:80px;
+    background: white;
+}
+
+@media screen and (max-width:1200px) {
+    .mainHeader {
+        flex-direction: row-reverse;
+        padding: 0px;
+    }
+    .globalOption :not(:first-child), .locationValue {
+        display: none;
+    }
+
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background: white;
+    height: 50px;
+    margin-right:16px;
+}
+
+.logoImage {
+    margin-right: 16px;
+    background: white;
+    height: 50px;
+    width:auto;
+    transition: transform 0.3s;
+}
+
+.logoImage:hover {
+    cursor: pointer;
+    transform:scale(1.1);
+}
+
+
+.userLocation {
+    background: white;
+    color: #686b78;
+    margin:16px;
+}
+
+.userLocation:hover {
+    cursor: pointer;
+}
+
+.userLocation:hover .preciseLocation {
+    color:#fc8018;
+}
+
+.userLocation:hover .preciseLocation::after {
+    background:#fc8018;
+}
+
+.userLocation:hover .locationValue {
+    color: #93959f;
+}
+
+.locationValue {
+    margin-left:4px;
+    margin-right:4px;
+    line-height: 1.2;
+    align-items: center;
+    background: white;
+    font-size: 14px;
+}
+
+.locationDropDown svg{
+    height:13px;
+    width: 12.6px;
+}
+
+
+.preciseLocation {
+    content: "Sector 42";
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 100;
+    color: #3D4152;
+    font-weight: bolder;
+    height: 15px;
+    min-width:30px;
+    margin-left: 16px;
+    position: relative;
+    top:0;
+}
+
+.preciseLocation:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    background: #3d4152;
+}
+
+.globalOptionsMenu {
+    background: white;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-width: 20%;
+}
+
+.newTag {
+    color: #ffa700;
+    font-size: 10px;
+    top: 0px;
+    font-weight: 600;
+    position: absolute;
+    right: -24px;
+    text-transform: uppercase;
+}
+
+.globalOption {
+    position: relative;
+    background-color: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #3D4152;
+    font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin-right:60px;
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.globalOption:first-child {
+    margin-right:0px;
+}
+
+.globalOption:hover {
+    cursor: pointer;
+    color: #fc8018;
+}
+
+.globalOption:hover svg{
+    fill:#fc8018;
+}

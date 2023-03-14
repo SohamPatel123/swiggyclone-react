@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import MainHeader from './Components/Header/MainHeader';
+import OfferHeader from './Components/Header/OfferHeader';
+import { SearchContextProvider } from './Context/SearchContextProvider';
+import MainFooter from './Components/Footer/MainFooter.js'
+import RestaurantNavigation  from './Components/MainBody/RestaurantNavigation';
+import {AllRestaurantsContainer} from './Components/MainBody/AllRestaurantsContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <SearchContextProvider>
+      <MainHeader/>
+      <OfferHeader />
+    </SearchContextProvider>
+    <RestaurantNavigation />
+    <AllRestaurantsContainer />
+    <MainFooter />
+  </>
   );
 }
 
